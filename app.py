@@ -17,7 +17,7 @@ def start(message: telebot.types.Message):
         'Чтобы увидеть список доступных валют введите комманду: /values'\
         f'\n\n{emojize(":chart_increasing:")} Чтобы посмотреть курс выбранной '\
         'валюты к другим валютам введите комманду: /exchange ' \
-        f'\n\n{emojize(":money_with_wings:")} Чтобы перевести сумму из одной валюты в'\
+        f'\n\n{emojize(":money_with_wings:")} Чтобы перевести сумму из одной валюты в '\
         'другую введите комманду: /convert'
     bot.reply_to(message, text)
 
