@@ -1,14 +1,17 @@
 import telebot
 import traceback
+import os
 from emoji import emojize
-from config import TOKEN
 from config import keyses
 from utils import CurrencyConvert
 from utils import CurrencyException
 from utils import create_mark
+from dotenv import load_dotenv
+from dotenv import find_dotenv
 
+load_dotenv(find_dotenv())
 
-bot = telebot.TeleBot(TOKEN)
+bot = telebot.TeleBot(os.getenv('TOKEN'))
 
 
 @bot.message_handler(commands=['start', 'help'])
