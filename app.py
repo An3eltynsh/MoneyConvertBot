@@ -7,9 +7,11 @@ from utils import CurrencyConvert
 from utils import CurrencyException
 from utils import create_mark
 from dotenv import load_dotenv
-from dotenv import find_dotenv
+from pathlib import Path
 
-load_dotenv(find_dotenv())
+load_dotenv()
+env_path = Path('.')/'.env'
+load_dotenv(dotenv_path = env_path)
 
 bot = telebot.TeleBot(os.getenv('TOKEN'))
 
